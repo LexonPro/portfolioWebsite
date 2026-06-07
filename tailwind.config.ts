@@ -61,6 +61,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // New custom accent colors
+        primaryPurple: "#7C3AED",
+        lightPurple: "#A78BFA",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -90,6 +93,9 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        // New utilities for UI polish
+        "slide-up": "slide-up 0.6s ease-out forwards",
+        "pulse-green": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Sparkles, Zap } from "lucide-react";
+import ParticleBackground from "../ParticleBackground";
+import profileImg from "../../assets/profile_placeholder.png";
 
 interface HeroSectionProps {
   onAnalyze: (username: string) => void;
@@ -36,6 +37,7 @@ const HeroSection = ({ onAnalyze, isLoading }: HeroSectionProps) => {
       {/* Glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-[100px]" />
+<ParticleBackground />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.div
@@ -48,9 +50,15 @@ const HeroSection = ({ onAnalyze, isLoading }: HeroSectionProps) => {
             AI-Powered GitHub Analysis
           </div>
 
-          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-4 leading-[1.1]">
-            <span className="text-gradient-green">LexonPro</span>
-          </h1>
+          {/* Internship badge */}
+          <div className="flex items-center gap-2 bg-green-600/10 text-green-600 px-3 py-1 rounded-full animate-pulse mb-6 inline-block mx-auto">
+            <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span>
+            Open to Internships 2025
+          </div>
+          {/* Profile photo placeholder */}
+          <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
+            <img src={profileImg} alt="Profile" className="w-48 h-48 rounded-full border-4 border-primaryPurple shadow-lg" />
+          </div>
           <p className="text-xl sm:text-2xl text-muted-foreground font-light mb-3">
             GitHub Profile Analyzer
           </p>

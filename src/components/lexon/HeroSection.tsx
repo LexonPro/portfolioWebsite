@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ParticleBackground from "../ParticleBackground";
-import profileImg from "../../assets/profile_placeholder.png";
+const profileImg = "https://via.placeholder.com/150"; // placeholder image
 
 interface HeroSectionProps {
   onAnalyze: (username: string) => void;

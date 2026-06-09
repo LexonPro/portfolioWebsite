@@ -4,6 +4,8 @@
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
+**Note**: This project has been upgraded to **Vite 8.0.16** with updated dev dependencies. See `package.json` for details.
+
 ## How can I edit this code?
 
 There are several ways of editing your application.

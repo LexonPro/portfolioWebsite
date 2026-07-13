@@ -8,42 +8,48 @@ const projectsData = [
     description: "An AI-driven system to recommend the most suitable crops based on soil metrics and weather conditions, optimizing yield and sustainability.",
     tech: ["Python", "Machine Learning", "FastAPI", "React"],
     github: "https://github.com/LexonPro",
-    demo: "#"
+    demo: "#",
+    image: "/images/project1.png"
   },
   {
     title: "AI Resume Analyzer",
     description: "A tool that parses resumes, analyzes keyword matches against job descriptions, and provides an ATS score using Natural Language Processing.",
     tech: ["Python", "NLP", "Spacy", "Streamlit"],
     github: "https://github.com/LexonPro",
-    demo: "#"
+    demo: "#",
+    image: "/images/project2.png"
   },
   {
     title: "AI Assistant Chatbot",
     description: "A responsive chatbot powered by conversational AI, capable of answering queries, summarizing text, and maintaining context.",
     tech: ["JavaScript", "Node.js", "OpenAI API", "React"],
     github: "https://github.com/LexonPro",
-    demo: "#"
+    demo: "#",
+    image: "/images/project3.png"
   },
   {
     title: "SpendIQ Expense Tracker",
     description: "A comprehensive expense tracking application with data visualization and predictive spending insights.",
     tech: ["React", "Tailwind CSS", "MongoDB", "Express"],
     github: "https://github.com/LexonPro",
-    demo: "#"
+    demo: "#",
+    image: "/images/project4.png"
   },
   {
     title: "HTML Learning Repository",
     description: "A structured repository containing interactive HTML examples and mini-projects for beginners.",
     tech: ["HTML5", "CSS3"],
     github: "https://github.com/LexonPro",
-    demo: "#"
+    demo: "#",
+    image: "/images/project5.png"
   },
   {
     title: "DSA Practice Repository",
     description: "A collection of Data Structures and Algorithms problems solved in C++ with optimized approaches.",
     tech: ["C++", "Algorithms", "Data Structures"],
     github: "https://github.com/LexonPro",
-    demo: "#"
+    demo: "#",
+    image: "/images/project6.png"
   }
 ];
 
@@ -56,10 +62,8 @@ const ProjectCard = ({ project, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="glass rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] relative"
     >
-      <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-        <div className="absolute inset-0 flex items-center justify-center text-gray-500 font-medium text-lg">
-          [ Project Image ]
-        </div>
+      <div className="h-48 bg-gray-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
           <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full hover:bg-primary text-white transition-colors backdrop-blur-sm">
             <FaGithub size={20} />

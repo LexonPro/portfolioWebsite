@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaStar, FaCodeBranch } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
-import GitHubCalendar from 'react-github-calendar';
+import { GitHubCalendar } from 'react-github-calendar';
 
 const Stats = () => {
   const [githubData, setGithubData] = useState({ repos: 42, stars: 128, commits: 1200 });

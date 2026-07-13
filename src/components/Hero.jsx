@@ -82,7 +82,7 @@ const Hero = () => {
             <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-2xl hover:-translate-y-1 transition-transform">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/shikhar-maurya" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary text-2xl hover:-translate-y-1 transition-transform">
+            <a href="https://www.linkedin.com/in/lexonpro" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary text-2xl hover:-translate-y-1 transition-transform">
               <FaLinkedin />
             </a>
             <a href="https://leetcode.com/LexonPro" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 text-2xl hover:-translate-y-1 transition-transform">

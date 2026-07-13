@@ -95,7 +95,7 @@ const Contact = () => {
               <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-2xl text-gray-300 hover:text-white hover:bg-white/10 transition-all hover:-translate-y-1">
                 <FaGithub size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/shikhar-maurya" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-2xl text-gray-300 hover:text-primary hover:bg-primary/10 transition-all hover:-translate-y-1">
+              <a href="https://www.linkedin.com/in/lexonpro" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-2xl text-gray-300 hover:text-primary hover:bg-primary/10 transition-all hover:-translate-y-1">
                 <FaLinkedin size={24} />
               </a>
               <a href="https://leetcode.com/LexonPro" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-2xl text-gray-300 hover:text-orange-500 hover:bg-orange-500/10 transition-all hover:-translate-y-1">

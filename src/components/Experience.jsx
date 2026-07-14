@@ -41,15 +41,9 @@ const Experience = () => {
 
   const experience = [
     {
-      title: "Software Engineering Intern",
-      institution: "Tech Company Placeholder",
-      date: "2024 - Present",
-      description: "Developed and maintained full-stack web applications. Collaborated with the data science team to integrate machine learning models into production systems."
-    },
-    {
       title: "Freelance Web Developer",
-      institution: "Self-Employed",
-      date: "2023 - 2024",
+      institution: "Shine Group",
+      date: "Feb 2026 - Present",
       description: "Designed and developed responsive portfolio websites and e-commerce platforms for local clients using React and Tailwind CSS."
     }
   ];

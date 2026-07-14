@@ -8,7 +8,7 @@ const projectsData = [
     description: "An AI-driven system to recommend the most suitable crops based on soil metrics and weather conditions, optimizing yield and sustainability.",
     tech: ["Python", "Machine Learning", "FastAPI", "React"],
     github: "https://github.com/LexonPro/Smart-Crop-Advisory-System",
-    demo: "https://smart-crop-advisory-system.vercel.app",
+    demo: "https://smart-crop-advisory-system-phi.vercel.app/",
     image: "/images/project1.png"
   },
   {

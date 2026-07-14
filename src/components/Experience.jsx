@@ -34,7 +34,7 @@ const Experience = () => {
     {
       title: "B.Tech in Data Science",
       institution: "GL Bajaj Institute of Technology & Management",
-      date: "2022 - 2026",
+      date: "2024 - 2028",
       description: "Pursuing Bachelor of Technology with a focus on Data Science, Machine Learning, and Software Development."
     }
   ];

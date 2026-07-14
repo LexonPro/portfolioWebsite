@@ -34,6 +34,30 @@ const projectsData = [
     github: "https://github.com/LexonPro/SpendIQ-Expense-Tracker",
     demo: "https://spendiq-expense-tracker.vercel.app",
     image: "/images/project4.png"
+  },
+  {
+    title: "Shine Group (Freelance)",
+    description: "A professional business website developed as a freelance project for Shine Group, featuring modern UI and responsive design.",
+    tech: ["React", "Tailwind CSS", "Vite"],
+    github: "https://github.com/LexonPro/shineGroup",
+    demo: "https://shinegroup.vercel.app",
+    image: "/images/shineGroup.png"
+  },
+  {
+    title: "GitHub Profile Analyzer",
+    description: "An analytical tool to fetch and visualize GitHub user statistics, repositories, and contribution data using the GitHub API.",
+    tech: ["React", "GitHub API", "Chart.js"],
+    github: "https://github.com/LexonPro/githubAnalyzer",
+    demo: "https://github-analyzer.vercel.app",
+    image: "/images/githubAnalyzer.png"
+  },
+  {
+    title: "CPU Scheduling Simulator",
+    description: "A CPU Scheduling algorithm simulator, visualizing process execution using Gantt charts for algorithms like FCFS, SJF, and Round Robin.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/LexonPro/cpu-Scheduler",
+    demo: "https://lexonpro.github.io/cpu-Scheduler",
+    image: "/images/cpuScheduler.png"
   }
 ];
 

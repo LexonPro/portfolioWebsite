@@ -7,49 +7,33 @@ const projectsData = [
     title: "Smart Crop Advisory System",
     description: "An AI-driven system to recommend the most suitable crops based on soil metrics and weather conditions, optimizing yield and sustainability.",
     tech: ["Python", "Machine Learning", "FastAPI", "React"],
-    github: "https://github.com/LexonPro",
-    demo: "#",
+    github: "https://github.com/LexonPro/Smart-Crop-Advisory-System",
+    demo: "https://smart-crop-advisory-system.vercel.app",
     image: "/images/project1.png"
   },
   {
     title: "AI Resume Analyzer",
     description: "A tool that parses resumes, analyzes keyword matches against job descriptions, and provides an ATS score using Natural Language Processing.",
     tech: ["Python", "NLP", "Spacy", "Streamlit"],
-    github: "https://github.com/LexonPro",
-    demo: "#",
+    github: "https://github.com/LexonPro/AI-Resume-Analyzer",
+    demo: "https://ai-resume-analyzer.streamlit.app",
     image: "/images/project2.png"
   },
   {
     title: "AI Assistant Chatbot",
     description: "A responsive chatbot powered by conversational AI, capable of answering queries, summarizing text, and maintaining context.",
     tech: ["JavaScript", "Node.js", "OpenAI API", "React"],
-    github: "https://github.com/LexonPro",
-    demo: "#",
+    github: "https://github.com/LexonPro/AI-Assistant-Chatbot",
+    demo: "https://ai-assistant-chatbot-lexonpro.vercel.app",
     image: "/images/project3.png"
   },
   {
     title: "SpendIQ Expense Tracker",
     description: "A comprehensive expense tracking application with data visualization and predictive spending insights.",
     tech: ["React", "Tailwind CSS", "MongoDB", "Express"],
-    github: "https://github.com/LexonPro",
-    demo: "#",
+    github: "https://github.com/LexonPro/SpendIQ-Expense-Tracker",
+    demo: "https://spendiq-expense-tracker.vercel.app",
     image: "/images/project4.png"
-  },
-  {
-    title: "HTML Learning Repository",
-    description: "A structured repository containing interactive HTML examples and mini-projects for beginners.",
-    tech: ["HTML5", "CSS3"],
-    github: "https://github.com/LexonPro",
-    demo: "#",
-    image: "/images/project5.png"
-  },
-  {
-    title: "DSA Practice Repository",
-    description: "A collection of Data Structures and Algorithms problems solved in C++ with optimized approaches.",
-    tech: ["C++", "Algorithms", "Data Structures"],
-    github: "https://github.com/LexonPro",
-    demo: "#",
-    image: "/images/project6.png"
   }
 ];
 

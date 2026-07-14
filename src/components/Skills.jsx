@@ -1,60 +1,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { 
+  SiCplusplus, SiPython, SiJavascript, SiReact, 
+  SiTailwindcss, SiNextdotjs, SiFastapi, SiNodedotjs, 
+  SiMongodb, SiMysql, SiGit, SiPostman, SiHtml5
+} from 'react-icons/si';
+import { FaDatabase } from 'react-icons/fa';
 
 const skillCategories = [
   {
     title: "Programming",
+    icon: <SiPython className="text-primary" />,
     skills: [
-      { name: "C++", level: 85 },
-      { name: "Python", level: 90 },
-      { name: "JavaScript", level: 85 },
-      { name: "SQL", level: 80 }
+      { name: "C++", icon: <SiCplusplus className="text-blue-500" /> },
+      { name: "Python", icon: <SiPython className="text-yellow-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "SQL", icon: <FaDatabase className="text-gray-400" /> }
     ]
   },
   {
     title: "Frontend",
+    icon: <SiReact className="text-cyan-400" />,
     skills: [
-      { name: "HTML & CSS", level: 95 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "React", level: 85 },
-      { name: "Next.js", level: 75 }
+      { name: "HTML & CSS", icon: <SiHtml5 className="text-orange-500" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
+      { name: "React", icon: <SiReact className="text-cyan-500" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-white" /> }
     ]
   },
   {
     title: "Backend",
+    icon: <SiNodedotjs className="text-green-500" />,
     skills: [
-      { name: "FastAPI", level: 80 },
-      { name: "Node.js", level: 75 }
+      { name: "FastAPI", icon: <SiFastapi className="text-teal-500" /> },
+      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> }
     ]
   },
   {
     title: "Database & Tools",
+    icon: <FaDatabase className="text-secondary" />,
     skills: [
-      { name: "MongoDB", level: 80 },
-      { name: "MySQL", level: 85 },
-      { name: "Git & GitHub", level: 90 },
-      { name: "Postman", level: 85 }
+      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+      { name: "Git & GitHub", icon: <SiGit className="text-red-500" /> },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" /> }
     ]
   }
 ];
-
-const SkillBar = ({ name, level }) => (
-  <div className="mb-4">
-    <div className="flex justify-between mb-1">
-      <span className="text-sm font-medium text-gray-300">{name}</span>
-      <span className="text-sm font-medium text-gray-400">{level}%</span>
-    </div>
-    <div className="w-full bg-gray-700 rounded-full h-2">
-      <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: `${level}%` }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full"
-      ></motion.div>
-    </div>
-  </div>
-);
 
 const Skills = () => {
   return (
@@ -71,6 +63,7 @@ const Skills = () => {
             My <span className="gradient-text">Skills</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Technologies and tools I work with to build robust applications.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -81,12 +74,27 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass p-6 rounded-2xl hover:border-primary/50 transition-colors"
+              className="glass p-8 rounded-3xl hover:border-primary/30 transition-all duration-300 group hover:shadow-[0_0_40px_rgba(59,130,246,0.1)] relative overflow-hidden"
             >
-              <h3 className="text-xl font-semibold mb-6 text-white border-b border-white/10 pb-2">{category.title}</h3>
-              <div>
+              {/* Background Glow */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors"></div>
+
+              <div className="flex items-center gap-4 mb-8 relative z-10">
+                <div className="p-4 bg-gray-900/50 rounded-2xl group-hover:bg-white/5 transition-colors border border-white/5">
+                  <div className="text-3xl">{category.icon}</div>
+                </div>
+                <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+              </div>
+              
+              <div className="flex flex-wrap gap-4 relative z-10">
                 {category.skills.map((skill, i) => (
-                  <SkillBar key={i} name={skill.name} level={skill.level} />
+                  <div 
+                    key={i} 
+                    className="flex items-center gap-3 px-5 py-3 bg-gray-900/80 rounded-xl border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 cursor-default shadow-lg shadow-black/20"
+                  >
+                    <div className="text-xl drop-shadow-md">{skill.icon}</div>
+                    <span className="text-gray-200 font-medium tracking-wide">{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </motion.div>

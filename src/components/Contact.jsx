@@ -17,9 +17,15 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-    alert("Message sent successfully!");
+    
+    const mailtoLink = `mailto:shikharkumarmaurya@gmail.com?subject=${encodeURIComponent(
+      formData.subject || 'New Contact Form Submission'
+    )}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+    
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 

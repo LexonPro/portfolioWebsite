@@ -14,16 +14,16 @@ const TimelineItem = ({ data, isEducation, index }) => (
       <div className="absolute left-0 sm:left-24 w-6 h-6 bg-gray-900 rounded-full border-4 border-primary flex items-center justify-center -translate-x-1/2 sm:translate-x-0">
         <div className="w-2 h-2 bg-primary rounded-full group-hover:scale-150 transition-transform"></div>
       </div>
-      <div className="sm:absolute sm:left-0 sm:w-20 sm:text-right text-xs font-semibold text-primary uppercase tracking-wider mb-2 sm:mb-0 mt-1">
+      <div className="sm:absolute sm:left-0 sm:w-20 sm:text-right text-xs font-semibold text-purple uppercase tracking-wider mb-2 sm:mb-0 mt-1">
         {data.date}
       </div>
-      <div className="glass p-6 rounded-2xl w-full hover:-translate-y-1 transition-transform border border-white/5 hover:border-primary/30">
+      <div className="black-gradient border border-white/[0.1] p-6 rounded-2xl w-full hover:-translate-y-1 transition-transform hover:border-purple/30">
         <div className="flex items-center gap-3 mb-2">
-          {isEducation ? <FaGraduationCap className="text-secondary text-xl" /> : <FaBriefcase className="text-secondary text-xl" />}
+          {isEducation ? <FaGraduationCap className="text-purple text-xl" /> : <FaBriefcase className="text-purple text-xl" />}
           <h3 className="text-xl font-bold text-white">{data.title}</h3>
         </div>
         <div className="text-lg font-medium text-gray-300 mb-3">{data.institution}</div>
-        <p className="text-gray-400 text-sm leading-relaxed">{data.description}</p>
+        <p className="text-[#C1C2D3] text-sm leading-relaxed">{data.description}</p>
       </div>
     </div>
   </motion.div>
@@ -55,7 +55,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 relative bg-white/5">
+    <section id="experience" className="py-20 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,15 +65,14 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Experience & <span className="gradient-text">Education</span>
+            Experience & <span className="text-purple">Education</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="space-y-12">
           <div>
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3 ml-4 sm:ml-0">
-              <FaBriefcase className="text-primary" /> Experience
+              <FaBriefcase className="text-purple" /> Experience
             </h3>
             <div className="space-y-4">
               {experience.map((item, index) => (
@@ -84,7 +83,7 @@ const Experience = () => {
 
           <div>
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3 ml-4 sm:ml-0">
-              <FaGraduationCap className="text-primary" /> Education
+              <FaGraduationCap className="text-purple" /> Education
             </h3>
             <div className="space-y-4">
               {education.map((item, index) => (

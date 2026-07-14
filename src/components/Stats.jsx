@@ -63,38 +63,38 @@ const Stats = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="glass p-8 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-colors flex flex-col"
+            className="black-gradient border border-white/[0.1] p-8 rounded-3xl relative overflow-hidden group hover:border-purple/50 transition-colors flex flex-col"
           >
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <FaGithub size={120} />
             </div>
             <div className="relative z-10 flex-grow">
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-4 bg-gray-800 rounded-2xl">
+                <div className="p-4 bg-black-100 rounded-2xl border border-white/5">
                   <FaGithub size={32} className="text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">GitHub Activity</h3>
-                  <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">@LexonPro</a>
+                  <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="text-purple hover:underline">@LexonPro</a>
                 </div>
               </div>
               
               <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="text-center p-4 bg-black-100 rounded-xl border border-white/10">
                   <p className="text-3xl font-bold text-white">{githubData.repos}</p>
                   <p className="text-xs sm:text-sm text-gray-400 mt-1">Repositories</p>
                 </div>
-                <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="text-center p-4 bg-black-100 rounded-xl border border-white/10">
                   <p className="text-3xl font-bold text-white">{githubData.stars}</p>
                   <p className="text-xs sm:text-sm text-gray-400 mt-1 flex items-center justify-center gap-1"><FaStar className="text-yellow-500 hidden sm:block"/> Stars</p>
                 </div>
-                <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="text-center p-4 bg-black-100 rounded-xl border border-white/10">
                   <p className="text-3xl font-bold text-white">{githubData.commits}</p>
                   <p className="text-xs sm:text-sm text-gray-400 mt-1 flex items-center justify-center gap-1"><FaCodeBranch className="text-green-500 hidden sm:block"/> Commits</p>
                 </div>
               </div>
               
-              <div className="w-full bg-gray-900/80 rounded-xl p-4 flex items-center justify-center border border-gray-800 overflow-x-auto">
+              <div className="w-full bg-black-100 rounded-xl p-4 flex items-center justify-center border border-white/5 overflow-x-auto">
                 <div className="min-w-max">
                   <GitHubCalendar 
                     username="LexonPro" 
@@ -118,14 +118,14 @@ const Stats = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="glass p-8 rounded-3xl relative overflow-hidden group hover:border-orange-500/50 transition-colors flex flex-col"
+            className="black-gradient border border-white/[0.1] p-8 rounded-3xl relative overflow-hidden group hover:border-orange-500/50 transition-colors flex flex-col"
           >
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <SiLeetcode size={120} className="text-orange-500" />
             </div>
             <div className="relative z-10 flex-grow">
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-4 bg-gray-800 rounded-2xl">
+                <div className="p-4 bg-black-100 rounded-2xl border border-white/5">
                   <SiLeetcode size={32} className="text-orange-500" />
                 </div>
                 <div>
@@ -135,7 +135,7 @@ const Stats = () => {
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                <div className="p-6 bg-white/5 rounded-xl flex flex-col justify-center border border-white/10">
+                <div className="p-6 bg-black-100 rounded-xl flex flex-col justify-center border border-white/10">
                   <p className="text-sm text-gray-400 mb-2">Problems Solved</p>
                   <p className="text-4xl font-bold text-white">{leetcodeData.solved}</p>
                   
@@ -146,7 +146,7 @@ const Stats = () => {
                   </div>
                 </div>
                 
-                <div className="p-6 bg-white/5 rounded-xl flex flex-col justify-center items-center text-center border border-white/10">
+                <div className="p-6 bg-black-100 rounded-xl flex flex-col justify-center items-center text-center border border-white/10">
                   <div className="w-24 h-24 rounded-full border-4 border-orange-500 flex items-center justify-center mb-3 shadow-[0_0_15px_rgba(249,115,22,0.3)]">
                     <p className="text-2xl font-bold text-white">{leetcodeData.rating}</p>
                   </div>

@@ -68,29 +68,33 @@ const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="glass rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] relative"
+      className="black-gradient rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300 group border border-white/[0.1] relative flex flex-col p-4 sm:p-6"
     >
-      <div className="h-48 bg-gray-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full hover:bg-primary text-white transition-colors backdrop-blur-sm">
-            <FaGithub size={20} />
-          </a>
-          <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full hover:bg-primary text-white transition-colors backdrop-blur-sm">
-            <FaExternalLinkAlt size={20} />
-          </a>
-        </div>
+      <div className="relative w-full h-48 sm:h-56 overflow-hidden rounded-2xl mb-6 bg-[#13162D]">
+        <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-        <p className="text-gray-400 text-sm mb-4 line-clamp-3">{project.description}</p>
-        <div className="flex flex-wrap gap-2">
+      <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-white">{project.title}</h1>
+      <p className="lg:text-base lg:font-normal font-light text-sm line-clamp-2 text-[#BEC1DD] my-4">
+        {project.description}
+      </p>
+
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-auto pt-4 gap-4">
+        <div className="flex flex-wrap items-center gap-2">
           {project.tech.map((tech, i) => (
-            <span key={i} className="text-xs font-medium px-2.5 py-1 bg-white/5 text-gray-300 rounded-full border border-white/10">
-              {tech}
-            </span>
+             <span key={i} className="text-xs font-medium px-2.5 py-1 bg-black-100 text-[#C1C2D3] rounded-lg border border-white/5">
+                {tech}
+             </span>
           ))}
+        </div>
+        
+        <div className="flex items-center gap-4 sm:gap-3">
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <FaGithub size={24} />
+          </a>
+          <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center text-purple text-sm font-medium hover:underline">
+            Check Live Site
+          </a>
         </div>
       </div>
     </motion.div>
@@ -109,9 +113,8 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+            A small selection of <span className="text-purple">recent projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -126,7 +129,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors font-medium">
+          <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 rounded-xl border border-white/10 bg-black-100 text-white hover:bg-white/5 transition-colors font-medium">
             View More on GitHub
           </a>
         </motion.div>

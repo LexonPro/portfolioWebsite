@@ -24,7 +24,7 @@ const Certificates = () => {
   const [selectedCert, setSelectedCert] = useState(null);
 
   return (
-    <section id="certificates" className="py-20 relative bg-white/5">
+    <section id="certificates" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,9 +34,8 @@ const Certificates = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Certificates</span>
+            My <span className="text-purple">Certificates</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -48,21 +47,21 @@ const Certificates = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: (index % 4) * 0.1 }}
               onClick={() => setSelectedCert(cert)}
-              className="glass p-4 rounded-xl cursor-pointer group hover:border-primary/50 transition-all text-center"
+              className="black-gradient border border-white/[0.1] p-4 rounded-xl cursor-pointer group hover:border-purple/50 transition-all text-center"
             >
-              <div className="w-full h-40 bg-gray-800 rounded-lg mb-4 flex items-center justify-center text-gray-500 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+              <div className="w-full h-40 bg-[#13162D] rounded-lg mb-4 flex items-center justify-center text-gray-500 overflow-hidden relative">
+                <div className="absolute inset-0 bg-purple/10 opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
                 {cert.type === 'image' ? (
                   <img src={cert.file} alt={cert.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
                 ) : (
-                  <div className="flex flex-col items-center gap-2 group-hover:scale-105 transition-transform">
-                    <svg className="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" /></svg>
+                  <div className="flex flex-col items-center gap-2 group-hover:scale-105 transition-transform z-20">
+                    <svg className="w-12 h-12 text-purple" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" /></svg>
                     <span className="text-xs font-medium text-gray-400">PDF Document</span>
                   </div>
                 )}
               </div>
-              <h3 className="text-white font-medium text-sm group-hover:text-primary transition-colors truncate">{cert.title}</h3>
-              <p className="text-gray-400 text-xs mt-1">{cert.issuer} • {cert.date}</p>
+              <h3 className="text-white font-medium text-sm group-hover:text-purple transition-colors truncate">{cert.title}</h3>
+              <p className="text-[#C1C2D3] text-xs mt-1">{cert.issuer} • {cert.date}</p>
             </motion.div>
           ))}
         </div>

@@ -25,8 +25,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 relative">
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse-slow"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,10 +34,9 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+            Get In <span className="text-purple">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-[#C1C2D3] max-w-2xl mx-auto mt-4">
             Have a question or want to work together? Feel free to reach out to me!
           </p>
         </motion.div>
@@ -53,35 +50,35 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <div className="glass p-8 rounded-3xl space-y-8">
+            <div className="black-gradient border border-white/[0.1] p-8 rounded-3xl space-y-8">
               <h3 className="text-2xl font-bold text-white border-b border-white/10 pb-4">Contact Information</h3>
               
               <div className="flex items-start gap-4">
-                <div className="p-4 bg-white/5 rounded-2xl text-primary">
+                <div className="p-4 bg-black-100 rounded-2xl text-purple border border-white/5">
                   <FaEnvelope size={24} />
                 </div>
                 <div>
                   <h4 className="text-gray-400 text-sm font-medium mb-1">Email</h4>
-                  <a href="mailto:shikharkumarmaurya@gmail.com" className="text-white hover:text-primary transition-colors font-medium">
+                  <a href="mailto:shikharkumarmaurya@gmail.com" className="text-white hover:text-purple transition-colors font-medium">
                     shikharkumarmaurya@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-4 bg-white/5 rounded-2xl text-secondary">
+                <div className="p-4 bg-black-100 rounded-2xl text-blue-400 border border-white/5">
                   <FaPhoneAlt size={24} />
                 </div>
                 <div>
                   <h4 className="text-gray-400 text-sm font-medium mb-1">Phone</h4>
-                  <a href="tel:+918004522805" className="text-white hover:text-secondary transition-colors font-medium">
+                  <a href="tel:+918004522805" className="text-white hover:text-blue-400 transition-colors font-medium">
                     +91 8004522805
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-4 bg-white/5 rounded-2xl text-accent">
+                <div className="p-4 bg-black-100 rounded-2xl text-accent border border-white/5">
                   <FaMapMarkerAlt size={24} />
                 </div>
                 <div>
@@ -91,14 +88,14 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="glass p-6 rounded-3xl flex justify-center gap-8">
-              <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-2xl text-gray-300 hover:text-white hover:bg-white/10 transition-all hover:-translate-y-1">
+            <div className="black-gradient border border-white/[0.1] p-6 rounded-3xl flex justify-center gap-8">
+              <a href="https://github.com/LexonPro" target="_blank" rel="noopener noreferrer" className="p-4 bg-black-100 border border-white/5 rounded-2xl text-gray-300 hover:text-white hover:bg-white/10 transition-all hover:-translate-y-1">
                 <FaGithub size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/lexonpro" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-2xl text-gray-300 hover:text-primary hover:bg-primary/10 transition-all hover:-translate-y-1">
+              <a href="https://www.linkedin.com/in/lexonpro" target="_blank" rel="noopener noreferrer" className="p-4 bg-black-100 border border-white/5 rounded-2xl text-gray-300 hover:text-blue-400 hover:bg-white/10 transition-all hover:-translate-y-1">
                 <FaLinkedin size={24} />
               </a>
-              <a href="https://leetcode.com/LexonPro" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-2xl text-gray-300 hover:text-orange-500 hover:bg-orange-500/10 transition-all hover:-translate-y-1">
+              <a href="https://leetcode.com/LexonPro" target="_blank" rel="noopener noreferrer" className="p-4 bg-black-100 border border-white/5 rounded-2xl text-gray-300 hover:text-orange-500 hover:bg-white/10 transition-all hover:-translate-y-1">
                 <SiLeetcode size={24} />
               </a>
             </div>
@@ -111,7 +108,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <form onSubmit={handleSubmit} className="glass p-8 rounded-3xl space-y-6">
+            <form onSubmit={handleSubmit} className="black-gradient border border-white/[0.1] p-8 rounded-3xl space-y-6">
               <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
               
               <div className="space-y-4">

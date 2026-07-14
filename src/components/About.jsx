@@ -5,65 +5,52 @@ const About = () => {
   return (
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-        </motion.div>
-
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+        <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-4 lg:gap-8 mx-auto w-full">
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:w-1/2"
+            className="relative overflow-hidden rounded-3xl border border-white/[0.1] transition duration-200 lg:col-span-3 md:col-span-6 lg:row-span-2 min-h-[40vh] lg:min-h-[60vh] black-gradient p-8 lg:p-10 flex flex-col justify-end"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-2xl blur-xl opacity-30"></div>
-              <div className="glass p-8 rounded-2xl relative z-10">
-                <h3 className="text-2xl font-semibold mb-4 text-white">Who am I?</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  I am a passionate B.Tech Data Science student and Full Stack Developer with a strong enthusiasm for building practical real-world projects. 
-                  My journey in tech is driven by an insatiable curiosity for AI, Data Science, and modern web development.
-                </p>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  As a fast learner, I thrive in challenging environments and constantly push myself to learn new technologies. 
-                  I enjoy translating complex problems into elegant, scalable software solutions.
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Currently, I am actively seeking internship opportunities where I can contribute my skills, learn from experienced professionals, and make a meaningful impact.
-                </p>
-              </div>
+            <div className="font-sans text-xl lg:text-4xl max-w-lg font-bold z-10 text-white leading-tight">
+              I am a passionate Data Science student and Full Stack Developer.
             </div>
+            <p className="text-[#C1C2D3] mt-4 z-10 max-w-md text-sm md:text-base">
+              Driven by an insatiable curiosity for AI and modern web development, I thrive in translating complex problems into elegant software solutions.
+            </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:w-1/2 grid grid-cols-2 gap-6"
+            transition={{ delay: 0.1 }}
+            className="relative overflow-hidden rounded-3xl border border-white/[0.1] transition duration-200 lg:col-span-2 md:col-span-3 min-h-[25vh] black-gradient p-8 flex flex-col items-center justify-center text-center"
           >
-            {[
-              { label: 'Degree', value: 'B.Tech Data Science' },
-              { label: 'Experience', value: 'Projects & Training' },
-              { label: 'Focus', value: 'Full Stack & AI' },
-              { label: 'Availability', value: 'Open for Internships' },
-            ].map((item, index) => (
-              <div key={index} className="glass p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 text-center group">
-                <h4 className="text-primary font-medium mb-2 group-hover:text-white transition-colors">{item.label}</h4>
-                <p className="text-white font-semibold">{item.value}</p>
-              </div>
-            ))}
+            <div className="font-sans text-xl lg:text-3xl font-bold z-10 text-white">
+              Open to Internships
+            </div>
+            <p className="text-[#C1C2D3] mt-2 text-sm md:text-base">
+              Currently seeking opportunities to learn, grow, and make a meaningful impact.
+            </p>
           </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="relative overflow-hidden rounded-3xl border border-white/[0.1] transition duration-200 lg:col-span-2 md:col-span-3 min-h-[25vh] black-gradient p-8 flex flex-col items-center justify-center text-center"
+          >
+             <div className="font-sans text-xl lg:text-3xl font-bold z-10 text-white">
+              Constant Learner
+            </div>
+            <p className="text-[#C1C2D3] mt-2 text-sm md:text-base">
+              I thrive in challenging environments and constantly push myself to master new technologies.
+            </p>
+          </motion.div>
+          
         </div>
       </div>
     </section>
